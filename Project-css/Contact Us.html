@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        *{
+           margin:0%;
+            padding:0%;
+            box-sizing:border box;
+        }
+        
+        html,body{
+           background-color: cornsilk;
+           font-family: "Baloo Bhai 2", serif;
+           height:100%;
+            width:100%;
+        }
+        
+        #header{
+            background-color: rgb(193, 129, 252);
+            height: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav{
+            margin-left: 100px;
+        }
+
+        .nav a{
+            color: white;
+            font-weight: 500;
+            font-size: 140%;
+        }
+        
+        .nav a:hover{
+            color: black;
+        }
+    
+        #table{
+            margin-top: 10px;
+            margin: 20px 0px 0px 60px;
+        }
+
+        .text{
+            text-align: left;
+            padding: 0px 0px 0px 10px;
+            height: 30px;
+            width: 200px;
+        }
+
+        .text:hover{
+            border-radius: 5px;
+            border: 2px solid rgb(34, 34, 253);
+        }
+
+        #female{
+            margin-left: 30px;
+        }
+
+        #submit{
+            font-size: larger;
+            height: 40px;
+            width: 130px;
+            margin-right: 50px;
+            padding: 5px 5px 5px 5px ;
+            background-color: lightblue;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+
+        #submit:hover{
+            color: white;
+            background-color: rgb(39, 39, 253);
+        }
+
+        #Reset{
+            font-size: larger;
+            height: 40px;
+            width: 130px;
+            padding: 5px 5px 5px 5px ;
+            background-color: lightblue;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+
+        #Reset:hover{
+            color: white;
+            background-color: rgb(39, 39, 253);
+        }
+
+        footer{
+            background-color: rgb(206, 255, 255);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="nav"><a href="Home.html" target="_blank" style="text-decoration: none;">Home</a></div>
+        <div class="nav"><a href="Culture.html" target="_blank" style="text-decoration: none;">Culture</a></div>
+        <div class="nav"><a href="Landmarks.html" target="_blank" style="text-decoration: none;">Landmarks</a></div>
+        <div class="nav"><a href="Cuisine.html" target="_blank" style="text-decoration: none;">Cuisine</a></div>
+        <div class="nav"><a href="Contact Us.html" target="_blank" style="text-decoration: none;">Contact Us</a></div>
+    </div>
+    <h2 style="text-align: center;">Contact Us</h2>
+    <b style="margin-left: 50px ; color: red;">please fill out the form below for any inquiries or to register as a student!!!</b>
+     <h3 style="text-align: center;">Student Registration Form</h3>
+    <div id="table">
+    <table>
+        <tr >
+            <td ><h4>First Name</h4></td>
+            <td>:</td>
+            <td><input type="text" placeholder="Enter Your First Name" class="text"></td>
+        </tr>
+        <tr height="20px">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><h4>Password</h4></td>
+            <td>:</td>
+            <td><input type="text" class="text"></td>
+        </tr>
+        <tr height="20px">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><h4>Gender</h4></td>
+            <td>:</td>
+            <td><input type="radio" value="Male" name="Gender" id="male">Male <input type="radio" value="Female" name="Gender" id="female">Female</td>
+        </tr>
+        <tr height="20px">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><h4>State</h4></td>
+            <td>:</td>
+            <td><select name="Degree" class="text">
+                <option value="select" selected disabled>Select Your state</option>
+                <option>GUJ</option>
+                <option>UP</option>
+                <option>MP</option>
+                <option>Bhira</option>
+            </select></td>
+        </tr>
+        <tr height="20px">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><h4>Uplaod your Resume</h4></td>
+            <td>:</td>
+            <td><input type="file" ></td>
+        </tr>
+        <tr height="20px">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><h4>Address</h4></td>
+            <td>:</td>
+            <td><textarea placeholder="Enter Your Full Address" class="text"></textarea></td>
+        </tr>
+        <tr height="20px">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><h4>Date of Birth</h4></td>
+            <td>:</td>
+            <td><input type="date" class="text"></td>
+        </tr>
+        <tr height="20px">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><h4>Preferred Interview Time</h4></td>
+            <td>:</td>
+            <td><input type="time" class="text"></td>
+        </tr>
+        <tr height="20px">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><h4>Marks</h4></td>
+            <td>:</td>
+            <td><input type="text" class="text"></td>
+        </tr>
+        <tr height="20px">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Submit" id="submit"><input type="button" value="Reset" id="Reset"></td>
+        </tr>
+    </table>
+    </div>
+    <h1 style="text-align: center; margin-top: 10px;">More Infomation</h1>
+    <p style="margin-left: 25%;">Explor government job opportunities on the official OJAS website:</p>
+    <iframe src="https://ojas.gujarat.gov.in/" alt="Not Found" style="height: 50%; width: 50%; margin-left: 25%;"></iframe>
+    <br>
+    <footer>
+        <div id="footer">
+            <a href="Home.html">Back To Home</a>
+            <br><br>
+            Contact us at<a href="Contact Us.html"> info@incredibileindia.com</a>
+            <br>
+            <p>&copy 2025 Incredible India Project. All rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
