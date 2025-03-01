@@ -48,17 +48,39 @@
             justify-content: center;
         }
 
-        #caption1{
-            display: flex;
-            justify-content: center;
-        }
-
         #footer{
             background-color: rgb(195, 248, 248);
             display: flex;
             margin-top: 10px;
             justify-content: center;
             align-items: center;
+        }
+
+        
+        @media screen and (max-width:480px) {
+            #header{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 10vh;
+                width: 98%;
+            }
+
+            .nav{
+                margin-left: 25px;
+            }
+
+           .nav a{
+                font-size: 15px;
+           }
+
+           h3{
+            font-size: 27px;
+           }
+           p{
+            font-size: 10px;
+           }
+          
         }
     </style>
 </head>
@@ -91,7 +113,7 @@
     <p>Highlights of india include:</p>
     </div>
 
-    <ul style="margin: 20px 0px 0px 30% ;">
+    <ul style="margin: 20px 0px 0px 15% ;">
         <li><b>Architecture </b>: Majestic monuments like the Taj Mahel and Red Fort.</li>
         <li><b>Cuisine</b> : Diverse flavors from spicy curries to sweet dessersts.</li>
         <li><b>Culture </b> : Vibrant festivels,classical dances,and colorful altire.</li>
@@ -134,4 +156,4 @@
         </div>  
     </div>
 </body>
-</html>
+</html>    
