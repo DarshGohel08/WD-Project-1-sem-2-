@@ -17,13 +17,13 @@
         html,body{
             background-color: blanchedalmond;
            font-family: "Baloo Bhai 2", serif;
-           height:100%;
-            width:100%;
+           height:100vh;
+            width:100vw;
         }
         
         #header{
             background-color: rgb(193, 129, 252);
-            height: 10%;
+            height: 10vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -49,7 +49,7 @@
         }
 
         #cuisine{
-            margin: 10px 0px 0px 40px;
+            margin: 10px 0px 0px 50px;
         }
 
         footer{
@@ -57,6 +57,23 @@
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        @media screen and (max-width:480px) {
+            #header{
+                display: flex;
+                align-items: center;
+                height: 5vh;
+                width: 98%;
+            }
+
+            .nav{
+                margin-left: 30px;
+            }
+
+           .nav a{
+                font-size: 13px;
+           }
         }
     </style>
 </head>
@@ -71,7 +88,7 @@
     <h1 style="text-align: center;">Popular Indian Dishes</h1>
     <div id="cuisine">
         <p>Explore the flavors of India through its diverse and rich culinary traditions!</p>
-        <audio controls muted src="./titanium.mp3"></audio>
+        <audio controls muted src="./titanium.mp3" width="30px"></audio>
         <h2>North Indian Cuisine</h2>
         <p>North india is known for its rich,aromatic,and flavorful dishes often cooked with ghee and spices:</p>
         <ul>
@@ -79,7 +96,6 @@
             <li><b>Butter Chicken</b> : A creamy,tomato-based curry tht's favorite wordwide.</li>
             <li><b>Paneer tikka</b> : Marinated Paneer cubes grilled to perfaction.</li>
         </ul>
-        <blockquote><figure><img src="./biryani.jpg"><figcaption>aromatic and flavorful Biryani</figcaption></figure></blockquote>
         <blockquote><figure><img src="./biryani.jpg"><figcaption>aromatic and flavorful Biryani</figcaption></figure></blockquote>
         <h2>south Indian Cuisine</h2>
         <p>South India offer a wide array of dishes with a perfect blend of spices and tangy flavors.</p>
