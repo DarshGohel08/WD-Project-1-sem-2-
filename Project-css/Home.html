@@ -8,57 +8,73 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <style>
-        *{
-           margin:0%;
-            padding:0%;
-            box-sizing:border box;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        html,body{
-           font-family: "Baloo Bhai 2", serif;
-           height:100%;
-            width:100%;
+        html, body {
+            font-family: "Baloo Bhai 2", serif;
+            height: 100%;
+            width: 100%;
             background-color: rgb(255, 167, 158);
         }
 
-        #header{
+        header {
             background-color: rgb(193, 129, 252);
             height: 10%;
             display: flex;
             align-items: center;
             justify-content: center;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
         }
 
-        .nav{
+        .nav {
             margin-left: 100px;
+            opacity: 0;
+            animation: slideIn 1s forwards;
         }
 
-        .nav a{
+        .nav a {
             color: white;
             font-weight: 500;
             font-size: 140%;
         }
 
-        .nav a:hover{
+        .nav a:hover {
             color: black;
         }
 
-        #img1{
+        #img1 {
             display: flex;
             justify-content: center;
+            opacity: 0;
+            animation: fadeIn 3s forwards;
         }
 
-        #footer{
+        #footer {
             background-color: rgb(195, 248, 248);
             display: flex;
             margin-top: 10px;
             justify-content: center;
             align-items: center;
+            padding: 10px;
+            opacity: 0;
+            animation: fadeIn 4s forwards;
         }
 
-        
-        @media screen and (max-width:480px) {
-            #header{
+        img {
+            width: 100%;
+            height: auto;
+            opacity: 0;
+            transform: scale(0);
+            animation: zoomIn 2s forwards;
+        }
+
+        @media screen and (max-width: 480px) {
+            header {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -66,94 +82,130 @@
                 width: 98%;
             }
 
-            .nav{
+            .nav {
                 margin-left: 25px;
             }
 
-           .nav a{
+            .nav a {
                 font-size: 15px;
-           }
+            }
 
-           h3{
-            font-size: 27px;
-           }
-           p{
-            font-size: 10px;
-           }
-          
+            h3 {
+                font-size: 27px;
+            }
+
+            p {
+                font-size: 10px;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes zoomIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(0.8);
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
     </style>
 </head>
 
+<body>
+
     <div>
-        <h1 style="text-align: center;"> Welcome to <mark>incredidle India</mark></h1>
+        <h1 style="text-align: center; animation: fadeIn 2s forwards;"> Welcome to <mark>Incredible India</mark></h1>
         <br>
-        <h3 style="text-align: center;">Discover the diversity, beauty, and rich heritage of India!</h3>
+        <h3 style="text-align: center; animation: fadeIn 2.5s forwards;">Discover the diversity, beauty, and rich heritage of India!</h3>
     </div>
-    <div id="header">
+
+    <header>
         <div class="nav"><a href="Home.html" target="_blank" style="text-decoration: none;">Home</a></div>
         <div class="nav"><a href="Culture.html" target="_blank" style="text-decoration: none;">Culture</a></div>
         <div class="nav"><a href="Landmarks.html" target="_blank" style="text-decoration: none;">Landmarks</a></div>
         <div class="nav"><a href="Cuisine.html" target="_blank" style="text-decoration: none;">Cuisine</a></div>
         <div class="nav"><a href="Contact Us.html" target="_blank" style="text-decoration: none;">Contact Us</a></div>
-    </div>
+    </header>
 
-    <h2 style="text-align: center; background-color: aqua;">About India</h2>
+    <h2 style="text-align: center; background-color: aqua; animation: fadeIn 3s forwards;">About India</h2>
 
-    <p>India is a land of incredibile diversity. From the snow-capped peaks of the Himalayan to the serene backwaters of Kerala, every comes of India tells a unique story. India is the second-most
-    pepulous country in the world and boasts a history spanning thousands of years. Its rich traditions have left an indelible mack on the world</p>
+    <p style="animation: fadeIn 3.5s forwards;">India is a land of incredible diversity. From the snow-capped peaks of the Himalayas to the serene backwaters of Kerala, every corner of India tells a unique story. India is the second-most populous country in the world and boasts a history spanning thousands of years. Its rich traditions have left an indelible mark on the world.</p>
 
     <div id="img1">
-        <img src="./india_map.jpg">
+        <img src="./india_map.jpg" alt="Map of India">
     </div>
 
     <div id="caption1">
-    <p><blockquote> A land of cultural and geographical diversity</blockquote></p>
-    <p><blockquote>"unity in diversity is not just a slogan in india but a way of life."</blockquote></p>
-    <p>Highlights of india include:</p>
+        <p><blockquote> A land of cultural and geographical diversity</blockquote></p>
+        <p><blockquote>"Unity in diversity is not just a slogan in India, but a way of life."</blockquote></p>
+        <p>Highlights of India include:</p>
     </div>
 
-    <ul style="margin: 20px 0px 0px 15% ;">
-        <li><b>Architecture </b>: Majestic monuments like the Taj Mahel and Red Fort.</li>
-        <li><b>Cuisine</b> : Diverse flavors from spicy curries to sweet dessersts.</li>
-        <li><b>Culture </b> : Vibrant festivels,classical dances,and colorful altire.</li>
+    <ul style="margin: 20px 0px 0px 15%; animation: fadeIn 4s forwards;">
+        <li><b>Architecture</b>: Majestic monuments like the Taj Mahal and Red Fort.</li>
+        <li><b>Cuisine</b>: Diverse flavors from spicy curries to sweet desserts.</li>
+        <li><b>Culture</b>: Vibrant festivals, classical dances, and colorful attire.</li>
     </ul>
 
-    <h2 style="text-align: center; background-color: aqua;">Famous Landmarks</h2>
-    <p>india is home to<mark>29 UNESCO world heritage sites,</mark>  making it a paradise for history and architecture enthusiasts.</p>
-    <ol style="margin: 10px 0px 0px 50px;">
-        <li><blockquote><figure><img src="./tajmahal.jpg"><figcaption>The Taj Mahal, a symbol of eternal love</figcaption></figure></blockquote></li>
-        <li><blockquote><figure><img src="./qutubminar.jpg"><figcaption>The Qutub Minar,an architectural marvel in Delhi</figcaption></figure></blockquote></li>
+    <h2 style="text-align: center; background-color: aqua; animation: fadeIn 4.5s forwards;">Famous Landmarks</h2>
+    <p style="animation: fadeIn 5s forwards;">India is home to <mark>29 UNESCO World Heritage sites</mark>, making it a paradise for history and architecture enthusiasts.</p>
+    <ol style="margin: 10px 0px 0px 50px; animation: fadeIn 5.5s forwards;">
+        <li><blockquote><figure><img src="./tajmahal.jpg" alt="Taj Mahal"><figcaption>The Taj Mahal, a symbol of eternal love</figcaption></figure></blockquote></li>
+        <li><blockquote><figure><img src="./qutubminar.jpg" alt="Qutub Minar"><figcaption>The Qutub Minar, an architectural marvel in Delhi</figcaption></figure></blockquote></li>
     </ol>
 
-    <p style="color: black;">don't miss exploring the instricate carvings,towering minarets, and breathtaking landscapes !</p>
-    <h2 style="text-align: center; background-color: aqua;">Indian Culture</h2>
-    <p>India's cultural heritage is a blend of various traditions, languages, and religions. Each region has its unique identity and traditions that are celebrated through festivals and daily life. Here are some highlights:</p>
+    <p style="color: black; animation: fadeIn 6s forwards;">Don't miss exploring the intricate carvings, towering minarets, and breathtaking landscapes!</p>
+
+    <h2 style="text-align: center; background-color: aqua; animation: fadeIn 6.5s forwards;">Indian Culture</h2>
+    <p style="animation: fadeIn 7s forwards;">India's cultural heritage is a blend of various traditions, languages, and religions. Each region has its unique identity and traditions that are celebrated through festivals and daily life. Here are some highlights:</p>
+
+    <ul style="margin: 20px 0px 0px 50px; animation: fadeIn 7.5s forwards;">
+        <li>Classical Dances: Bharatnatyam, Kathak, and Odissi.</li>
+        <li>Music: Traditional instruments like the Sitar, Tabla, and Veena.</li>
+        <li>Festivals: Diwali, Holi, Eid, and Christmas bring people together in celebration.</li>
+    </ul>
+
+    <blockquote style="margin: 10px 0px 0px 50px;"><figure><img src="./dance.jpg" alt="Indian Classical Dance"><figcaption>A glimpse of Indian classical dance</figcaption></figure></blockquote>
+
+    <h2 style="text-align: center; background-color: aqua; animation: fadeIn 8s forwards;">Delicious Indian Cuisine</h2>
+    <p style="animation: fadeIn 8.5s forwards;">Indian food is as diverse as its culture. From the fiery curries of the south to the hearty bread of the north, there's something for everyone. Popular dishes include:</p>
+
+    <ul style="margin: 20px 0px 0px 50px; animation: fadeIn 9s forwards;">
+        <li><b>North Indian</b>: Butter chicken, naan, and paneer tikka.</li>
+        <li><b>South Indian</b>: Dosa, idli, and sambhar.</li>
+        <li><b>Street Food</b>: Pani puri, chaat, and vada pav.</li>
+    </ul>
     
-    <ul style="margin: 20px 0px 0px 50px;">
-        <li>classical Dances : Bharatnatyam, Kathak, and Odissi.</li>
-        <li>Music : Traditional instruments like the Sitar, Tabla and Veena.</li>
-        <li>Festivals : Diwali, Holi, Eid and christmas bring people together in celebration .</li>
-    </ul>
+    <blockquote style="margin: 10px 0px 0px 50px;"><figure><img src="./biryani.jpg" alt="Hyderabadi Biryani"><figcaption>Delicious Hyderabadi Biryani</figcaption></figure></blockquote>
+    <blockquote style="margin: 10px 0px 0px 50px;"><figure><img src="./street_food.jpg" alt="Indian Street Food"><figcaption>Colorful and flavorful Indian street food</figcaption></figure></blockquote>
 
-    <blockquote style="margin: 10px 0px 0px 50px;"><figure><img src="./dance.jpg"><figcaption>A glimpse of Indian classical Dance</figcaption></figure></blockquote>
-    <h2 style="text-align: center; background-color: aqua;">Delicious Indian Cuisine</h2>
-    <p>Indian food is as diverse as its culture. From the fiery curries of the south to the hearty bread of the north, there's something for everyone. Popular dishes include :</p>
-
-    <ul style="margin: 20px 0px 0px 50px;">
-        <li><b>North Indian</b> : Butter chicken, naan, and paneer tikka</li>
-        <li><b>South Indian</b> : Dosa, idli, and sambhar.</li>
-        <li><b>Street Food</b> : Pani purn, chaat, and vada pav.</li>
-    </ul>
-    <blockquote style="margin: 10px 0px 0px 50px;"><figure><img src="./biryani.jpg"><figcaption>Delicious Hydrabadi Biryani</figcaption></figure></blockquote>
-    <blockquote style="margin: 10px 0px 0px 50px;"><figure><img src="./street_food.jpg"><figcaption>colorful and flavorful Indian street food</figcaption></figure></blockquote>
-
-    <div id="footer">
-        <div id="deatils">
-        <p><b>Contact us at</b> : <a href="" style="text-decoration: none;">info@incredibileindia.com</a></p>
-        <p><b>Follow us on</b>:<a href="https://www.instagram.com/" style="text-decoration: none;">instagram</a>|<a href="https://web.telegram.org/k/" style="text-decoration: none;"> Twitter</a></p>  
-        <p>&copy 2025 Incredible India Project. All rights reserved</p>
-        </div>  
-    </div>
+    <footer>
+        <div id="details">
+            <p><b>Contact us at:</b> <a href="mailto:info@incredibleindia.com" style="text-decoration: none;">info@incredibleindia.com</a></p>
+            <p><b>Follow us on:</b> <a href="https://www.instagram.com/" style="text-decoration: none;">Instagram</a> | <a href="https://web.telegram.org/k/" style="text-decoration: none;">Twitter</a></p>
+            <p>&copy; 2025 Incredible India Project. All rights reserved</p>
+        </div>
+    </footer>  
 </body>
-</html>    
+</html>
