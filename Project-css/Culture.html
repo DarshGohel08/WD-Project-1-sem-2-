@@ -3,75 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Culture </title>
+    <title>Culture</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <style>
-        *{
-           margin:0%;
-            padding:0%;
-            box-sizing:border box;
-        }
-        
-        html,body{
-           font-family: "Baloo Bhai 2", serif;
-           height:100%;
-            width:100%;
-            background-color: rgb(252, 165, 138);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        #header{
+        html, body {
+            font-family: "Baloo Bhai 2", serif;
+            height: 100%;
+            width: 100%;
+            background-color: rgb(252, 165, 138);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #header {
             background-color: rgb(193, 129, 252);
             height: 10%;
             display: flex;
             align-items: center;
             justify-content: center;
+            animation: slideDown 1s ease-out;
         }
 
-        .nav{
+        @keyframes slideDown {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .nav {
             margin-left: 100px;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
-        .nav a{
+        .nav a {
             color: white;
             font-weight: 500;
             font-size: 140%;
+            text-decoration: none;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
         }
 
-        .nav a:hover{
+        .nav a:hover {
             color: black;
+            transition: color 0.3s ease;
         }
 
-        #culutre{
-            margin: 10px 0px 0px 40px;
+        #culutre {
+            margin: 10px 0 0 40px;
+            animation: fadeIn 2s ease-in-out;
         }
 
-        #table{
+        #table {
             display: flex;
             align-items: center;
             justify-content: center;
+            animation: fadeIn 2s ease-in-out;
         }
 
-        table{
+        table {
             font-weight: 600;
             font-size: large;
-            margin: 20px 0px 20px 0px;
+            margin: 20px 0;
             border: 2px solid black;
             background-color: rgb(147, 252, 252);
             width: 30%;
+            animation: slideUp 1s ease-out;
         }
 
-        footer{
+        @keyframes slideUp {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        footer {
             height: 15%;
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: rgb(162, 253, 162);
+            flex-direction: column;
+            animation: fadeIn 3s ease-in-out;
         }
-        
-        @media screen and (max-width:480px) {
-            #header{
+
+        footer a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            margin-top: 10px;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+
+        footer a:hover {
+            color: rgb(193, 129, 252);
+            transition: color 0.3s ease;
+        }
+
+        @media screen and (max-width: 480px) {
+            #header {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -79,55 +136,69 @@
                 width: 98%;
             }
 
-            .nav{
+            .nav {
                 margin-left: 25px;
             }
 
-           .nav a{
+            .nav a {
                 font-size: 15px;
-           }
+            }
 
-           h3{
-            font-size: 27px;
-           }
-           p{
-            font-size: 10px;
-           }
-          
+            h3 {
+                font-size: 27px;
+            }
+
+            p {
+                font-size: 10px;
+            }
+
+            #table table {
+                width: 80%;
+            }
         }
     </style>
 </head>
+
 <body>
     <div id="header">
-        <div class="nav"><a href="Home.html" target="_blank" style="text-decoration: none;">Home</a></div>
-        <div class="nav"><a href="Culture.html" target="_blank" style="text-decoration: none;">Culture</a></div>
-        <div class="nav"><a href="Landmarks.html" target="_blank" style="text-decoration: none;">Landmarks</a></div>
-        <div class="nav"><a href="Cuisine.html" target="_blank" style="text-decoration: none;">Cuisine</a></div>
-        <div class="nav"><a href="Contact Us.html" target="_blank" style="text-decoration: none;">Contact Us</a></div>
+        <div class="nav"><a href="Home.html" target="_blank">Home</a></div>
+        <div class="nav"><a href="Culture.html" target="_blank">Culture</a></div>
+        <div class="nav"><a href="Landmarks.html" target="_blank">Landmarks</a></div>
+        <div class="nav"><a href="Cuisine.html" target="_blank">Cuisine</a></div>
+        <div class="nav"><a href="Contact Us.html" target="_blank">Contact Us</a></div>
     </div>
 
     <h2 style="text-align: center; background-color: rgb(151, 252, 51);">Indian Culture</h2>
-    <div id="culutre">   
-        <p>Discover the rich and diverse culture of india ,a land of unity in diversity.</p>
+
+    <div id="culutre">
+        <p>Discover the rich and diverse culture of India, a land of unity in diversity.</p>
+
         <h3>Festivals</h3>
-        <p>India celebrates a veryety of festivels that reflect its rich cultural heritage and religious diversity:</p>
+        <p>India celebrates a variety of festivals that reflect its rich cultural heritage and religious diversity:</p>
 
         <ul>
-            <li><mark><b>Diwali</b></mark> : Festivel of light,symbolizing the victory of light over darkness.</li>
-            <li><b>Holi</b> : Festivel of colors,celebrating love and the arrival of spring.</li>
-            <li><b>Eid</b> : Festivel of Harmony,marked by prayers,feasts,and charity.</li>
-            <li><b>christmas</b> : Festivel of joy,celebrating the birth of Jesus Christ.</li>
+            <li><mark><b>Diwali</b></mark>: Festival of lights, symbolizing the victory of light over darkness.</li>
+            <li><b>Holi</b>: Festival of colors, celebrating love and the arrival of spring.</li>
+            <li><b>Eid</b>: Festival of harmony, marked by prayers, feasts, and charity.</li>
+            <li><b>Christmas</b>: Festival of joy, celebrating the birth of Jesus Christ.</li>
         </ul>
-        <blockquote><figure><img src="./diwali.jpg" style="border: 4px solid black;"><figcaption>Diwali-Festival of Light</figcaption></figure></blockquote>
-    </div>
-        <h2 style="text-align: center; background-color: rgb(151, 252, 51);">languages</h2>
-        <p>India is a linguistic treasure trove with 22 officially recognized Languages and thousend of regional dialects:</p>
 
-        <h3 style="text-align: center; background-color: rgb(140, 253, 140);">Popular Languages in India</h3>
-        <div id="table">
-            <table border="3px" cellspacing="0">
+        <blockquote>
+            <figure><img src="./diwali.jpg" style="border: 4px solid black;">
+                <figcaption>Diwali - Festival of Light</figcaption>
+            </figure>
+        </blockquote>
+    </div>
+
+    <h2 style="text-align: center; background-color: rgb(151, 252, 51);">Languages</h2>
+    <p>India is a linguistic treasure trove with 22 officially recognized languages and thousands of regional dialects:</p>
+
+    <h3 style="text-align: center; background-color: rgb(140, 253, 140);">Popular Languages in India</h3>
+
+    <div id="table">
+        <table border="3px" cellspacing="0">
             <tr align="center">
-                <td>Languge</td>
+                <td>Language</td>
                 <td>Region</td>
             </tr>
             <tr align="center">
@@ -135,7 +206,7 @@
                 <td>North India</td>
             </tr>
             <tr align="center">
-                <td>Bengali	</td>
+                <td>Bengali</td>
                 <td>West Bengal</td>
             </tr>
             <tr align="center">
@@ -144,26 +215,31 @@
             </tr>
             <tr align="center">
                 <td>Telugu</td>
-                <td>Andhra Pradesh
-                </td>
+                <td>Andhra Pradesh</td>
             </tr>
-            </table>
-        </div>
-        <h2 style="text-align: center; background-color: rgb(151, 252, 51);;">Traditional Attire</h2>
-        <p>Indian traditional clothing varies by region,showcasing its culture diversity.</p>
-        <ul style="margin: 10px 0px 0px 40px;">
-            <li><b>saree</b> : Elegant drape worn by women across India.</li>
-            <li><b>Kurta-pajama</b> : Comfortable attrie for men,popular in the north.</li>
-            <li><b>Lehenga</b> : A festive outfit for women,especially in weddings.</li>
-            <li><b>Dhoti</b> : Traditional men's wear in southern and eastern India.</li>
-        </ul>
-        <blockquote style="margin: 10px 0px 0px 40px;"><figure><img src="./saree.jpg" style="border: 4px solid black;"><figcaption>Traditional Saree-Grace and Elegance</figcaption></figure></blockquote>
-        <footer>
-            <div id="contact">
-                <a href="Home.html" ><_ _Back To Home</a>
-                    <p><b>Contact us at</b></p><a></a>
-                    <p>&copy 2025 Incredible India Project. All rights reserved</p>
-            </div>
-        </footer>
+        </table>
+    </div>
+
+    <h2 style="text-align: center; background-color: rgb(151, 252, 51);">Traditional Attire</h2>
+    <p>Indian traditional clothing varies by region, showcasing its cultural diversity.</p>
+
+    <ul style="margin: 10px 0 0 40px;">
+        <li><b>Saree</b>: Elegant drape worn by women across India.</li>
+        <li><b>Kurta-pajama</b>: Comfortable attire for men, popular in the north.</li>
+        <li><b>Lehenga</b>: A festive outfit for women, especially in weddings.</li>
+        <li><b>Dhoti</b>: Traditional men's wear in southern and eastern India.</li>
+    </ul>
+
+    <blockquote style="margin: 10px 0 0 40px;">
+        <figure><img src="./saree.jpg" style="border: 4px solid black;">
+            <figcaption>Traditional Saree - Grace and Elegance</figcaption>
+        </figure>
+    </blockquote>
+
+    <footer>
+        <a href="Home.html">Back to Home</a>
+        <p><b>Contact us at:</b></p>
+        <p>&copy; 2025 Incredible India Project. All rights reserved</p>
+    </footer>
 </body>
 </html>
